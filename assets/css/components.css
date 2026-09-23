@@ -535,3 +535,48 @@ body:has(.audio-dock:not([hidden])) {
 .skip:not(:focus) {
   clip-path: inset(50%);
 }
+.collection-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+#collection-intro {
+  padding: 24px;
+  background: var(--surface);
+  border-left: 3px solid var(--accent);
+  margin: 24px 0;
+}
+.collection-order {
+  border-top: 1px solid var(--line);
+  padding: 24px 0;
+  margin-top: 24px;
+}
+.collection-order ol {
+  padding: 0;
+  list-style: none;
+}
+.collection-order li {
+  display: flex;
+  gap: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.collection-order li span {
+  color: var(--muted);
+  font-size: 12px;
+  min-width: 90px;
+}
+.collection-order a[aria-current] {
+  color: var(--accent);
+  font-weight: bold;
+}
+.catalogue-grid.list > div {
+  width: 100%;
+}
+@media (max-width: 460px) {
+  .collection-order li {
+    flex-direction: column;
+    gap: 2px;
+  }
+}

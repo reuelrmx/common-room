@@ -115,9 +115,11 @@ export function selectTrack(item, trackIndex = 0, start = true) {
   index = trackIndex;
   const track = item.tracks[index];
   audio.src = mediaUrl(track.url);
+  dock.querySelector('[data-audio="prev"]').disabled = item.tracks.length < 2;
+  dock.querySelector('[data-audio="next"]').disabled = item.tracks.length < 2;
   dock.hidden = false;
   dock.querySelector(".audio-track").innerHTML =
-    `<img src="${e(item.cover)}" alt="" width="46" height="46"><div><strong>${e(track.title)}</strong><small>${e(item.artist)}</small></div>`;
+    `<img src="${e(item.cover)}" alt="" width="46" height="46"><div><strong>${e(track.title)}</strong><small>${e(track.artist || item.artist)}</small></div>`;
   dock.querySelector(".elapsed").textContent = "0:00";
   dock.querySelector(".audio-progress input").value = 0;
   if (start) {

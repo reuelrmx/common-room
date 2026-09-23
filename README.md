@@ -2,7 +2,18 @@
 
 A complete, plain-HTML entertainment library with a dark editorial design, separate movie/game/book/music catalogues, and a moderated anonymous discussion system. No frontend framework, bundler, runtime package dependencies, trackers, or user accounts.
 
-The included collection is **demo material**, not a claim to a commercial media library. Four original samples exercise the full interfaces: a 12-second MP4 with VTT subtitles, a downloadable browser memory game, a short book in TXT/PDF, and two synthesized WAV tracks. Other fictional entries deliberately have no playback/download buttons. Landscape artwork has separate provenance in [docs/artwork.md](docs/artwork.md).
+## Maintaining the catalogue
+
+Edit **`data/`**, not **`public/data/`**. Build with `python3 scripts/build.py` after edits when serving or deploying `public/`. The build validates entries and protects generated data edits from being silently overwritten.
+
+See [Adding content](docs/adding-content.md) for complete, separate examples of singles, albums, standalone movies/books, trilogies, franchises, and series with episode or reading order.
+
+- Music: `releaseType: "single"` or `"album"`; tracks use `streamUrl` (legacy `url` is accepted).
+- Movies: `kind: "standalone"`, `"film"`, or `"episode"`.
+- Books: `kind: "standalone"` or `"volume"`.
+- Groups: `data/collections.json`, with `category`, `type`, and ordered member IDs.
+
+The old movie, music, book, and nonplayable game demos have been removed. The operator's music entry is preserved. Signal Garden is the only retained playable demo. Source/licence metadata remains the operator's responsibility; downloads without it are hidden rather than assigned an invented licence.
 
 ## Run locally
 
@@ -44,7 +55,7 @@ GitHub source
        └─ native browser media requests → R2 custom domain / media CDN
 ```
 
-`scripts/build.py` copies a safe public subset. It does not compile the frontend. Secrets, migrations, source configuration, and tests are never copied to `public/`. Large production media should live in object storage. The tiny original demonstration media are intentionally checked into `media/demo/` so the repository works offline after loading.
+`scripts/build.py` copies a safe public subset. It does not compile the frontend. Secrets, migrations, source configuration, and tests are never copied to `public/`. Large production media should live in object storage. The small original browser game is included in `media/demo/`.
 
 ## Repository
 
@@ -56,7 +67,7 @@ assets/js/pages/        Home, browse, and detail rendering
 assets/js/players/      Audio, native video, text/PDF reader
 assets/images/          Local photographs, WebP cover art, SVG favicon
 media/demo/             Small original playable/readable samples
-data/                   Four catalogues and editorial picks
+data/                   Four catalogues, ordered collections, editorial picks
 functions/api/comments/ Cloudflare Pages API implementation
 migrations/             D1 schema and indexes
 scripts/                Static deployment and validation helpers
@@ -94,7 +105,7 @@ Deleting a parent cascades to replies. Hiding a parent does not automatically hi
 
 ## Testing
 
-`python3 scripts/validate.py` checks the catalogue and referenced local assets. `node tests/filters.mjs` checks combined filtering and sorting. Browser and local D1 test instructions and results are recorded in `docs/testing.md`.
+`python3 scripts/validate.py` checks the catalogue and referenced local assets. `node tests/filters.mjs` checks combined filtering and sorting. `node tests/content-model.mjs` checks releases and collection ordering. `python3 tests/build.py` checks generated-data overwrite protection. Browser and local D1 test instructions and results are recorded in `docs/testing.md`.
 
 ## Troubleshooting
 
@@ -109,4 +120,4 @@ Deleting a parent cascades to replies. Hiding a parent does not automatically hi
 
 ## Real limitations
 
-Static catalogue changes require deployment. Loading all four JSON files is appropriate for this small library; add a search index/pagination for a large archive. No star ratings, popularity, view counts, fake discussions, or cloud-synced favourites are implied. Anonymous moderation is manual and IP-based throttling is not complete bot protection. The film is a motion study without sound, not a full movie. EPUB reading is not implemented; add an EPUB download format only if a real licensed file exists. Browser codec and PDF support vary. Strictly sandboxed games cannot access cookies/storage or open popups; independently evaluate a game's capabilities before changing its sandbox. Cross-document audio cannot play continuously. R2 usage and custom domains may have costs; consult current provider terms. Deployment requires your Cloudflare/GitHub accounts and has not been performed by this repository.
+Static catalogue changes require deployment. Loading all four JSON files is appropriate for this small library; add a search index/pagination for a large archive. No star ratings, popularity, view counts, fake discussions, or cloud-synced favourites are implied. Anonymous moderation is manual and IP-based throttling is not complete bot protection. EPUB reading is not implemented; add an EPUB download format only if a real licensed file exists. Browser codec and PDF support vary. Strictly sandboxed games cannot access cookies/storage or open popups; independently evaluate a game's capabilities before changing its sandbox. Cross-document audio cannot play continuously. R2 usage and custom domains may have costs; consult current provider terms. Deployment requires your Cloudflare/GitHub accounts and has not been performed by this repository.

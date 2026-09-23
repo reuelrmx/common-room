@@ -12,8 +12,8 @@ const sql = (command) =>
   );
 const ids = [];
 const payload = {
-  content_id: "the-quiet-earth",
-  content_type: "movies",
+  content_id: "signal-garden",
+  content_type: "games",
   username: "Integration test",
   body: "<script>unsafeMarkup()</script>",
 };
@@ -27,7 +27,7 @@ async function post(path, body, origin = base) {
 }
 const list = async () => {
   const r = await fetch(
-    base + "/api/comments?contentId=the-quiet-earth&contentType=movies",
+    base + "/api/comments?contentId=signal-garden&contentType=games",
   );
   assert.equal(r.status, 200);
   return (await r.json()).data;
@@ -90,7 +90,8 @@ try {
   assert.equal(nested.status, 400);
   const cross = await post("/api/comments", {
     ...payload,
-    content_id: "beyond-the-blue",
+    content_id: "New-West-Those-Eyes",
+    content_type: "music",
     parent_id: id,
   });
   assert.equal(cross.status, 400);

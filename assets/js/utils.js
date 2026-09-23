@@ -8,6 +8,7 @@ export const escapeHTML = (value) =>
   );
 export const $ = (selector, root = document) => root.querySelector(selector);
 export function safeUrl(value) {
+  if (!value) return "";
   try {
     const u = new URL(value, location.origin);
     return ["https:", "http:"].includes(u.protocol) ? u.href : "";
@@ -54,6 +55,7 @@ export function imageFallback(root = document) {
     img.addEventListener(
       "error",
       () => {
+        img.removeAttribute("srcset");
         img.src = "/assets/images/fallback.svg";
       },
       { once: true },

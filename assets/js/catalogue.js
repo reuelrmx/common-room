@@ -1,3 +1,8 @@
+import {
+  normalizeItem,
+  attachCollections,
+  typeLabel,
+} from "./content-model.js";
 import { config } from "./config.js";
 import {
   escapeHTML as e,
@@ -31,9 +36,14 @@ export const loadCatalogue = () =>
       const items = await response.json();
       if (!Array.isArray(items))
         throw Error("The catalogue format could not be read.");
-      return items.map((item) => ({ ...item, category }));
+      return items.map((item) => normalizeItem(item, category));
     }),
-  ).then((groups) => groups.flat()));
+  ).then(async (groups) => {
+    const response = await fetch("/data/collections.json");
+    if (!response.ok) throw Error("Collections could not be loaded.");
+    const collections = await response.json();
+    return attachCollections(groups.flat(), collections);
+  }));
 export const detailUrl = (item) =>
   `/${detailPages[item.category]}.html?id=${encodeURIComponent(item.id)}`;
 export const mediaUrl = (value) => {
@@ -71,7 +81,7 @@ export function card(item) {
   if (!item) return "";
   const saved = savedIds().includes(item.id);
   const creator = item.author || item.artist || item.developer || item.year;
-  return `<article class="card ${e(item.category)}"><a class="art" href="${detailUrl(item)}"><img src="${e(item.thumbnail || item.cover || "/assets/images/fallback.svg")}" srcset="${e(item.thumbnail || item.cover)} 280w, ${e(item.cover)} 600w" sizes="(max-width: 760px) 45vw, 220px" alt="${e(item.title)} — demo artwork" loading="lazy" width="360" height="540"></a><button class="save-button" data-save="${e(item.id)}" aria-label="Save ${e(item.title)}" aria-pressed="${saved}">${saved ? "✓" : "+"}</button><div class="card-info"><h3><a href="${detailUrl(item)}">${e(item.title)}</a></h3><div class="meta">${e(creator)} <span aria-hidden="true">·</span> ${e(item.genres?.[0] || "Uncategorised")}</div><div class="card-type">${singular[item.category]} <span aria-hidden="true">/</span> ${item.available ? "Original demo" : "Demo preview"}</div></div></article>`;
+  return `<article class="card ${e(item.category)}"><a class="art" href="${detailUrl(item)}"><img src="${e(item.thumbnail || item.cover || "/assets/images/fallback.svg")}" srcset="${e(item.thumbnail || item.cover)} 280w, ${e(item.cover)} 600w" sizes="(max-width: 760px) 45vw, 220px" alt="${e(item.title)} artwork" loading="lazy" width="360" height="540"></a><button class="save-button" data-save="${e(item.id)}" aria-label="Save ${e(item.title)}" aria-pressed="${saved}">${saved ? "✓" : "+"}</button><div class="card-info"><h3><a href="${detailUrl(item)}">${e(item.title)}</a></h3><div class="meta">${e(creator)} <span aria-hidden="true">·</span> ${e(item.genres?.[0] || "Uncategorised")}</div><div class="card-type">${e(typeLabel(item))} <span aria-hidden="true">/</span> ${item.demo ? "Original demo" : item.available ? "In the collection" : "Preview"}</div></div></article>`;
 }
 export function bindCatalogueActions() {
   document.addEventListener("click", (event) => {

@@ -1,6 +1,6 @@
 # Catalogue artwork provenance
 
-The downloadable demo movie, text, audio, and game are original project samples. The photographic artwork is **not** part of their CC0 dedication. It is incorporated into catalogue cover designs under the [Unsplash Licence](https://unsplash.com/license). Do not offer the photographs as standalone media downloads or claim authorship.
+Signal Garden is the only retained original playable demo. The earlier movie, book, audio samples, and their catalogue covers have been removed. The photographic artwork is **not** part of their CC0 dedication. It is incorporated into catalogue cover designs under the [Unsplash Licence](https://unsplash.com/license). Do not offer the photographs as standalone media downloads or claim authorship.
 
 | Local file | Original image URL |
 | --- | --- |
@@ -15,3 +15,5 @@ The downloadable demo movie, text, audio, and game are original project samples.
 Retrieved September 23, 2026. The official [Unsplash usage guidance](https://help.unsplash.com/en/articles/2612315-can-i-use-unsplash-images-for-personal-or-commercial-projects) and [attribution guidance](https://help.unsplash.com/en/articles/2612337-do-i-have-to-give-credit-to-a-contributor-when-i-use-their-image) were checked. The `-wide.webp` and `-small.webp` files are responsive versions of the corresponding JPEG. Derived `.webp` covers combine these backgrounds with original typography, shapes, and fictional titles. The JSON `backdrop` field identifies the corresponding photograph. Book layouts use the photo as an inset. Album designs use the photo with concentric line artwork. Signal Garden's catalogue cover is illustrative; its screenshot is captured from the actual game separately.
 
 Before replacing artwork, verify its licence independently of the media licence. Keep the original page URL, author credit where available, licence version, retrieval date, and evidence in your content audit. The provided URLs record the exact downloaded image; photographer names are not invented.
+
+Operator-added artwork, including `those.jpg`, is not covered by this landscape-photo provenance list. Record its actual source and licence separately; no rights are inferred.

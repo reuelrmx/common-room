@@ -16,6 +16,4 @@ Display the source, licence link, and required attribution on the item page. Use
 
 ## This repository
 
-All catalogue names are fictional demonstration entries. The four playable/readable original samples are identified as such. CC0 applies to original sample media/code only, not the independently licensed landscape photographs. No third-party films, novels, commercial games, or commercial recordings are redistributed. Generated sample checksums come from the included actual bytes.
-
-Before public launch, inspect [artwork provenance](artwork.md), confirm the photo licence still meets your intended use, add a real monitored contact mailbox to `config.js`, and replace demo records with verified catalogue content as desired. These operational steps cannot be performed by inventing ownership, contact details, or licensing evidence.
+Signal Garden is the only remaining original demo; its source is CC0. Original movie, book, and audio demos were removed. Operator-added content is not automatically licensed by this repository. The current music entry has incomplete source/licence metadata; the interface preserves its streaming URL but does not assert redistribution rights or offer downloads until those details are documented. Landscape photographs remain separately licensed; see artwork.md.
