@@ -1,32 +1,41 @@
 [
   {
-    "id": "New West",
-    "slug": "Eyes",
+    "id": "New-West-Those-Eyes",
+    "slug": "those-eyes",
     "title": "New West - Those Eyes",
     "description": "",
     "year": 2026,
+
     "cover": "/assets/images/those.jpg",
     "backdrop": "/assets/images/those.jpg",
+    "backdropSmall": "/assets/images/those.jpg",
+    "thumbnail": "/assets/images/those.jpg",
+
     "featured": true,
     "dateAdded": "2026-09-23",
-    "sourceName": "",
-    "sourceUrl": "https://pub-ed8a59aaadbb4d7cac91feb8bede31ac.r2.dev/Music/New%20West%20-%20Those%20Eyes.mp3",
-    "attribution": "",
-    "demo": true,
-    "available": true,
+
+    "artist": "New West",
     "language": "English",
     "format": "mp3",
-    "artist": "New West",
+
+    "sourceName": "",
+    "sourceUrl": "",
+
+    "streamUrl": "https://pub-ed8a59aaadbb4d7cac91feb8bede31ac.r2.dev/Music/New%20West%20-%20Those%20Eyes.mp3",
+    "downloadUrl": "https://pub-ed8a59aaadbb4d7cac91feb8bede31ac.r2.dev/Music/New%20West%20-%20Those%20Eyes.mp3",
+
+    "demo": false,
+    "available": true,
+
     "tracks": [
       {
         "id": "Those-Eyes",
-        "title": "New West - Those Eyes",
+        "title": "Those Eyes",
+        "artist": "New West",
+        "format": "mp3",
         "streamUrl": "https://pub-ed8a59aaadbb4d7cac91feb8bede31ac.r2.dev/Music/New%20West%20-%20Those%20Eyes.mp3",
         "downloadUrl": "https://pub-ed8a59aaadbb4d7cac91feb8bede31ac.r2.dev/Music/New%20West%20-%20Those%20Eyes.mp3"
       }
-    ],
-    "backdropSmall": "/assets/images/those.jpg",
-    "thumbnail": "/assets/images/those.jpg"
+    ]
   }
-
 ]
