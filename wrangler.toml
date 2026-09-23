@@ -5,5 +5,5 @@ pages_build_output_dir = "./public"
 [[d1_databases]]
 binding = "DB"
 database_name = "common-room-comments"
-database_id = "00000000-0000-0000-0000-000000000000"
+database_id = "9fbc29b6-2e9e-44da-94d7-ea1f306833ca"
 migrations_dir = "migrations"
