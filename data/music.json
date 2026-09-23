@@ -1,41 +1,36 @@
 [
   {
     "id": "still-rooms",
-    "slug": "still-rooms",
-    "title": "Still Rooms",
-    "description": "Two original synthesized sketches. Soft tones, long pauses, and room to think.",
+    "slug": "Eyes",
+    "title": "New West - Those Eyes",
+    "description": "",
     "year": 2026,
     "genres": ["Ambient", "Electronic"],
-    "cover": "/assets/images/still-rooms.webp",
-    "backdrop": "/assets/images/sea-wide.webp",
+    "cover": "/assets/images/those.jpg",
+    "backdrop": "/assets/images/those.jpg",
     "featured": true,
     "dateAdded": "2026-09-22",
     "license": "CC0",
     "licenseUrl": "/about.html#licensing",
-    "sourceName": "Common Room original demo",
+    "sourceName": "",
     "sourceUrl": "/about.html#demo",
-    "attribution": "Original demo created for this project. Artwork licensed separately; see About.",
+    "attribution": "",
     "demo": true,
     "available": true,
     "language": "English",
-    "format": "WAV",
+    "format": "mp3",
     "fileSize": "8 MB per track",
-    "artist": "Common Room Studio",
+    "artist": "New West",
     "tracks": [
       {
         "id": "Those-Eyes",
         "title": "New West - Those Eyes",
         "streamUrl": "https://pub-ed8a59aaadbb4d7cac91feb8bede31ac.r2.dev/Music/New%20West%20-%20Those%20Eyes.mp3",
         "downloadUrl": "https://pub-ed8a59aaadbb4d7cac91feb8bede31ac.r2.dev/Music/New%20West%20-%20Those%20Eyes.mp3"
-      },
-      {
-        "title": "Before the Rain",
-        "url": "/media/demo/before-rain.wav",
-        "duration": "0:20"
       }
     ],
-    "backdropSmall": "/assets/images/sea-small.webp",
-    "thumbnail": "/assets/images/still-rooms-thumb.webp"
+    "backdropSmall": "/assets/images/those.jpg",
+    "thumbnail": "/assets/images/those.jpg"
   },
   {
     "id": "night-transmissions",
