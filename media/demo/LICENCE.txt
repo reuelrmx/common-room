@@ -1,0 +1,11 @@
+Common Room original demonstration media
+
+The original generated motion study quiet.mp4, quiet-en.vtt, synthesized audio
+open-window.wav and before-rain.wav, Field Notes text and PDF, and Signal Garden
+HTML/CSS/JavaScript are dedicated to the public domain under CC0 1.0, to the
+extent permitted by law. https://creativecommons.org/publicdomain/zero/1.0/
+
+These are original demonstration samples made for this project. Catalogue
+photographs and derived photographic covers are NOT included in this CC0
+dedication. Their separate licence and sources are documented in
+/docs/artwork.md and on the About page.

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recently Added — Common Room</title>
+    <meta
+      name="description"
+      content="An independent collection of openly shareable movies, games, music and books. Browse, read, play, and save your next good find."
+    />
+    <meta name="theme-color" content="#141815" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Recently Added — Common Room" />
+    <meta
+      property="og:description"
+      content="Good things are better shared. An independent digital collection."
+    />
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/css/base.css" />
+    <link rel="stylesheet" href="/assets/css/layout.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <script type="module" src="/assets/js/app.js"></script>
+  </head>
+  <body data-page="recent" data-kind="recently-added">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/index.html" aria-label="commonroom home"
+          ><svg viewBox="0 0 32 32" aria-hidden="true">
+            <path
+              d="M5 5h9v22H5zM18 5h9v9h-9zM18 18h9v9h-9z"
+              fill="currentColor"
+            /></svg
+          ><span
+            >common<span class="brand-light">room</span
+            ><span class="brand-dot">.</span></span
+          ></a
+        ><button
+          class="menu-toggle icon-button"
+          aria-expanded="false"
+          aria-controls="navigation"
+          aria-label="Toggle navigation"
+        >
+          ☰
+        </button>
+        <nav id="navigation" aria-label="Main navigation">
+          <a href="/index.html">Home</a><a href="/movies.html">Movies</a
+          ><a href="/games.html">Games</a><a href="/music.html">Music</a
+          ><a href="/books.html">Books</a
+          ><a class="mobile-search-link" href="/search.html">Search</a>
+        </nav>
+        <form class="header-search" action="/search.html" role="search">
+          <label class="sr-only" for="global-search"
+            >Search the collection</label
+          ><svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="10.5" cy="10.5" r="6.5" />
+            <path d="m16 16 5 5" /></svg
+          ><input
+            id="global-search"
+            name="q"
+            placeholder="Find something good…"
+            type="search"
+          /><kbd>/</kbd>
+        </form>
+        <button class="random-header" data-random>
+          <span aria-hidden="true">⤨</span> Random</button
+        ><a class="library-link" href="/library.html" aria-label="My Library"
+          ><svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 3h12v18l-6-4-6 4z" /></svg
+        ></a>
+      </div>
+    </header>
+    <div class="utility-bar">
+      <div>
+        <span>A little off the beaten path.</span
+        ><a href="/recently-added.html"
+          ><span class="live-dot"></span> Recently added
+          <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </div>
+    <main id="main" tabindex="-1">
+      <div class="initial-state">
+        <p class="eyebrow">COMMON ROOM / THE COLLECTION</p>
+        <h1>Recently Added</h1>
+        <p class="loading">Opening the shelves…</p>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <a class="brand" href="/index.html"
+        >common<span class="brand-light">room</span
+        ><span class="brand-dot">.</span></a
+      >
+      <p>Good things are better shared.</p>
+      <nav aria-label="Footer">
+        <a href="/about.html">About & licences</a
+        ><a href="/about.html#contact">Get in touch</a
+        ><a href="/library.html">My Library</a>
+      </nav>
+      <small>An independent collection. No algorithms. Just good finds.</small>
+    </footer>
+    <div id="audio-dock" hidden></div>
+    <div id="toast" role="status" class="toast" hidden></div>
+    <noscript
+      ><div class="noscript">
+        JavaScript is needed to browse the catalogue and use players. You can
+        still read <a href="/about.html">About & licences</a> or open the
+        <a href="/data/movies.json">catalogue data</a>.
+      </div></noscript
+    >
+  </body>
+</html>

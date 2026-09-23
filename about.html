@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About the collection — Common Room</title>
+    <meta
+      name="description"
+      content="An independent collection of openly shareable movies, games, music and books. Browse, read, play, and save your next good find."
+    />
+    <meta name="theme-color" content="#141815" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="About the collection — Common Room" />
+    <meta
+      property="og:description"
+      content="Good things are better shared. An independent digital collection."
+    />
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/css/base.css" />
+    <link rel="stylesheet" href="/assets/css/layout.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <script type="module" src="/assets/js/app.js"></script>
+  </head>
+  <body data-page="about" data-kind="about">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/index.html" aria-label="commonroom home"
+          ><svg viewBox="0 0 32 32" aria-hidden="true">
+            <path
+              d="M5 5h9v22H5zM18 5h9v9h-9zM18 18h9v9h-9z"
+              fill="currentColor"
+            /></svg
+          ><span
+            >common<span class="brand-light">room</span
+            ><span class="brand-dot">.</span></span
+          ></a
+        ><button
+          class="menu-toggle icon-button"
+          aria-expanded="false"
+          aria-controls="navigation"
+          aria-label="Toggle navigation"
+        >
+          ☰
+        </button>
+        <nav id="navigation" aria-label="Main navigation">
+          <a href="/index.html">Home</a><a href="/movies.html">Movies</a
+          ><a href="/games.html">Games</a><a href="/music.html">Music</a
+          ><a href="/books.html">Books</a
+          ><a class="mobile-search-link" href="/search.html">Search</a>
+        </nav>
+        <form class="header-search" action="/search.html" role="search">
+          <label class="sr-only" for="global-search"
+            >Search the collection</label
+          ><svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="10.5" cy="10.5" r="6.5" />
+            <path d="m16 16 5 5" /></svg
+          ><input
+            id="global-search"
+            name="q"
+            placeholder="Find something good…"
+            type="search"
+          /><kbd>/</kbd>
+        </form>
+        <button class="random-header" data-random>
+          <span aria-hidden="true">⤨</span> Random</button
+        ><a class="library-link" href="/library.html" aria-label="My Library"
+          ><svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 3h12v18l-6-4-6 4z" /></svg
+        ></a>
+      </div>
+    </header>
+    <div class="utility-bar">
+      <div>
+        <span>A little off the beaten path.</span
+        ><a href="/recently-added.html"
+          ><span class="live-dot"></span> Recently added
+          <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </div>
+    <main id="main" tabindex="-1">
+      <div class="page-intro">
+        <p class="eyebrow">AN OPEN SHELF, FOR EVERYONE</p>
+        <h1>A place for good finds.</h1>
+        <p>
+          Common Room is an independent digital collection for films, games,
+          books, and music that can be shared legally.
+        </p>
+      </div>
+      <div class="prose">
+        <h2 id="demo">A small, honest beginning</h2>
+        <p>
+          This starter catalogue contains clearly labelled fictional demo
+          entries. The Quiet Earth is an original twelve-second motion study,
+          Signal Garden is a working browser game, Field Notes is an original
+          short text, and Still Rooms contains original synthesized audio. Other
+          entries demonstrate the catalogue and do not offer invented downloads.
+          Names are fictional and do not refer to commercial works with similar
+          titles.
+        </p>
+        <h2 id="licensing">Source & Licence</h2>
+        <p>
+          The original demo text, generated audio, motion study, and Signal
+          Garden source are dedicated to the public domain under
+          <a
+            href="https://creativecommons.org/publicdomain/zero/1.0/"
+            rel="noopener noreferrer"
+            >CC0 1.0</a
+          >
+          to the extent permitted by law. Catalogue artwork uses landscape
+          photographs under the
+          <a href="https://unsplash.com/license" rel="noopener noreferrer"
+            >Unsplash Licence</a
+          >; these photographs are not part of the CC0 dedication and are not
+          offered as standalone downloads. See
+          <a href="/docs/artwork.md">artwork provenance</a>.
+        </p>
+        <p>
+          Every item includes its own source and licence. Free access alone is
+          not permission to redistribute. Public-domain status can vary by
+          country. We do not claim ownership over third-party works.
+        </p>
+        <h2>Your privacy</h2>
+        <p>
+          Saved titles and reading positions stay in this browser. No analytics,
+          advertising pixels, or accounts. Clearing browser storage removes your
+          library. Anonymous discussions store your chosen display name,
+          comment, and timestamp. A short-lived salted network hash limits spam;
+          raw IP addresses are not stored in D1. Hosting providers may retain
+          operational logs.
+        </p>
+        <h2 id="contact">Corrections & takedown requests</h2>
+        <p id="contact-info">
+          This is an undeployed demonstration. A public licensing contact has
+          not yet been configured. The operator must provide a monitored contact
+          address before public launch.
+        </p>
+        <p>
+          When reporting a licence issue, include the item link, the affected
+          material, evidence of the rights involved, and a way to contact you.
+          The operator should temporarily remove disputed downloads while
+          reviewing the claim.
+        </p>
+        <h2>Discussion guidelines</h2>
+        <p>
+          Talk about the work. Be considerate. Do not post personal information,
+          spam, threats, or unlawful content. Comments are reviewed before
+          appearing. Display names are not verified identities.
+        </p>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <a class="brand" href="/index.html"
+        >common<span class="brand-light">room</span
+        ><span class="brand-dot">.</span></a
+      >
+      <p>Good things are better shared.</p>
+      <nav aria-label="Footer">
+        <a href="/about.html">About & licences</a
+        ><a href="/about.html#contact">Get in touch</a
+        ><a href="/library.html">My Library</a>
+      </nav>
+      <small>An independent collection. No algorithms. Just good finds.</small>
+    </footer>
+    <div id="audio-dock" hidden></div>
+    <div id="toast" role="status" class="toast" hidden></div>
+    <noscript
+      ><div class="noscript">
+        JavaScript is needed to browse the catalogue and use players. You can
+        still read <a href="/about.html">About & licences</a> or open the
+        <a href="/data/movies.json">catalogue data</a>.
+      </div></noscript
+    >
+  </body>
+</html>

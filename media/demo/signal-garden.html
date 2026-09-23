@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Signal Garden — original memory game</title>
+    <link rel="stylesheet" href="signal-garden.css" />
+    <script src="signal-garden.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <p class="label">COMMON ROOM ORIGINAL</p>
+      <h1>Signal Garden</h1>
+      <p>Watch the signals. Repeat the sequence.</p>
+      <div id="board" role="group" aria-label="Four signal pads">
+        <button data-pad="0" aria-label="Signal 1, fern">1</button
+        ><button data-pad="1" aria-label="Signal 2, mist">2</button
+        ><button data-pad="2" aria-label="Signal 3, clay">3</button
+        ><button data-pad="3" aria-label="Signal 4, dusk">4</button>
+      </div>
+      <p id="status" role="status" aria-live="polite">Ready when you are.</p>
+      <button id="start">Start a round</button>
+      <p class="hint">Use the pads or keys 1–4. No time limit on your turn.</p>
+    </main>
+  </body>
+</html>
